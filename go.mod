@@ -1,4 +1,4 @@
-module github.com/andrewslotin/rummelsnuff
+module github.com/asmodat/rummelsnuff
 
 go 1.15
 
