@@ -59,7 +59,7 @@ func main() {
 	}
 	fd.Close()
 
-	prNum, forked := event.Number, event.PullRequest.Head.Repo.GetFork()
+	prNum, _ := event.Number, event.PullRequest.Head.Repo.GetFork()
 
 	pr, _, err := client.PullRequests.Get(ctx, owner, repo, prNum)
 	if err != nil {
