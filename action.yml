@@ -1,6 +1,6 @@
-name: "Check and reject spam PRs"
-description: "Run basic checks and close & mark spam PRs"
-author: "Andrey Slotin"
+name: "Check and reject ANY spam PRs"
+description: "Run basic checks and close & mark ANY spam PRs"
+author: "Andrey Slotin, mod by Asmodat"
 inputs:
   access_token:
     description: "GitHub access token"
@@ -10,7 +10,7 @@ inputs:
     required: false
     default: "Spam"
   close_spam_prs:
-    description: "Automatically close spam PRs (yes/no)?"
+    description: "Automatically closes ANY spam PRs (yes/no)?"
     required: false
     default: "yes"
 runs:
