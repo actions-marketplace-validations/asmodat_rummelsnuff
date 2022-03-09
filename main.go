@@ -59,6 +59,8 @@ func main() {
 	}
 	fd.Close()
 
+	prNum, forked := event.Number, event.PullRequest.Head.Repo.GetFork()
+
 	pr, _, err := client.PullRequests.Get(ctx, owner, repo, prNum)
 	if err != nil {
 		log.Fatalf("could not fetch the PR %d in %s/%s: %s", prNum, owner, repo, err)
