@@ -59,12 +59,6 @@ func main() {
 	}
 	fd.Close()
 
-	prNum, forked := event.Number, event.PullRequest.Head.Repo.GetFork()
-	if !forked {
-		fmt.Println("the pull request is not from a forked repository")
-		os.Exit(0)
-	}
-
 	pr, _, err := client.PullRequests.Get(ctx, owner, repo, prNum)
 	if err != nil {
 		log.Fatalf("could not fetch the PR %d in %s/%s: %s", prNum, owner, repo, err)
