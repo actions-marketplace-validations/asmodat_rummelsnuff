@@ -12,7 +12,7 @@ RUN adduser \
     --uid "${UID}" \
     "${USER}"
 
-WORKDIR $GOPATH/github.com/andrewslotin/rummelsnuff
+WORKDIR $GOPATH/github.com/asmodat/rummelsnuff
 
 COPY go.mod go.sum ./
 RUN go mod download
